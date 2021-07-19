@@ -7,6 +7,13 @@ dotenv.config()
 
 Client.db = require('./db.json')
 
+Client.on('guildMemberAdd', (member) => {
+    //lorsqu'un utilisateur rejoint.
+member.channels.cache.get('851198220494831626').send(`➜ ${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \n・Pense a prendre tes <#851198220494831626> !`)
+});
+
+
+
 Client.on('message', (message) => {
 
     let args = message.content.split(" ");
@@ -30,15 +37,5 @@ Client.on('message', (message) => {
         default: break;
     }
 });
-
-Client.on('guildMemberAdd', (member) => {
-    //lorsqu'un utilisateur rejoint.
-member.channels.cache.get('851198220494831626').send(`➜ ${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \n・Pense a prendre tes <#851198220494831626> !`)
-});
-
-
-
-
-
 
 Client.login(process.env.token)
