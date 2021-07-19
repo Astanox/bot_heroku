@@ -9,7 +9,7 @@ Client.db = require('./db.json')
 
 Client.on('guildMemberAdd', (member) => {
     //lorsqu'un utilisateur rejoint.
-member.channels.cache.get('866762820396908557').send(`➜ ${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \n・Pense a prendre tes <#851198220494831626> !`)
+member.channels.cache.get('866762820396908557').send(` ${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \nPense a prendre tes <#851198220494831626> !`)
 });
 
 
