@@ -7,7 +7,7 @@ dotenv.config()
 
 Client.db = require('./db.json')
 
-Client.on('guildMemberAdd', (member) => {
+Client.on('guildMemberAdd', (member, Client) => {
     // Lorsqu'un utilisateur rejoin.
     let welcomeChannel = Client.channels.cache.get('866762820396908557');
     welcomeChannel.send(`${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \n\n Pense a prendre tes <#851198220494831626> !`)
