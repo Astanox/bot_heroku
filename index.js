@@ -33,7 +33,7 @@ Client.on('message', (message) => {
 
 Client.on('guildMemberAdd', (member) => {
     //lorsqu'un utilisateur rejoint.
-client.channels.cache.get('851198220494831626').send(`➜ ${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \n・Pense a prendre tes <#851198220494831626> !`)
+member.channels.cache.get('851198220494831626').send(`➜ ${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \n・Pense a prendre tes <#851198220494831626> !`)
 });
 
 
