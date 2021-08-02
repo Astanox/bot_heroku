@@ -10,7 +10,7 @@ Client.db = require('./db.json')
 Client.on('guildMemberAdd', (member) => {
     // Lorsqu'un utilisateur rejoin.
     let welcomeChannel = Client.channels.cache.get('851198220494831626');
-    welcomeChannel.send(`${member} vient de rejoindre le serveur souhaitez lui la Bienvenue, Nous somme désormais ${member.guild.memberCount} 🎉 \n\n Pense a prendre tes <#851198220494831626> !`);
+    welcomeChannel.send(`${member} vient de rejoindre le serveur souhaitez lui la Bienvenue,\n Nous somme désormais ${member.guild.memberCount} 🎉 ! \n\n Pense a prendre tes <#842297550991523840> !`);
 
     member.roles.add('861938290529402942');
 });
